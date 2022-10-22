@@ -27,3 +27,13 @@ int BinarySearch(int[] array, int find)
   return -1;
 }
 #endregion
+
+#region y = n
+
+int FindIndexInArray(int[] array, int find)
+{
+  for (int i = 0; i < array.Length; i++)
+    if (array[i] == find) return i;
+  return -1;
+}
+#endregion
