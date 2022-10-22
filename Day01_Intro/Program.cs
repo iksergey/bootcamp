@@ -61,3 +61,42 @@ void FillWays(int[,] map)
 
 // FillWays(new int[8, 8]);
 #endregion
+
+
+
+#region Умножение аⁿ
+
+long Pow(int a, int n)
+{
+  long result = 1;
+  while (n != 0)
+  {
+    result = result * a;
+    n--;
+  }
+  return result;
+}
+
+long QuickPow(int a, int n)
+{
+  long result = 1;
+  while (n != 0)
+  {
+    if (n % 2 != 0)
+    {
+      n--;
+      result *= a;
+    }
+    else
+    {
+      a *= a;
+      n /= 2;
+    }
+  }
+  return result;
+}
+
+// Console.WriteLine(Pow(2, 10));
+// Console.WriteLine(QuickPow(2, 10));
+
+#endregion
