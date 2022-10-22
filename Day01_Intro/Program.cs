@@ -1,2 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿Console.Clear();
+#region y = 1
+
+void What()
+{
+  const int size = 10;
+  int[] array = new int[size];
+
+  int position = 0;
+  array[position] = 2022;
+}
+
+#endregion
