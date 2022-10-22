@@ -107,26 +107,32 @@ long QuickPow(int a, int n)
 
 int GcdForUp(int x, int y)
 {
+  int count = 0;
+
   int gcd = 1;
   int min = x < y ? x : y;
 
   for (int i = 2; i <= min; i++)
   {
+    count++;
     if (x % i == 0 && y % i == 0) gcd = i;
   }
+  Console.WriteLine($"GcdForUp, count: {count}");
 
   return gcd;
 }
 int GcdForDown(int x, int y)
 {
+  int count = 0;
+
   int gcd = 1;
   int min = x < y ? x : y;
-
   for (int i = min; i >= 2; i--)
   {
+    count++;
     if (x % i == 0 && y % i == 0) { gcd = i; break; }
   }
-
+  Console.WriteLine($"GcdForDown, count: {count}");
   return gcd;
 }
 
@@ -136,13 +142,18 @@ int GcdForDown(int x, int y)
 
 int EuclideanAlgorithm(int x, int y)
 {
+  int count = 0;
+
   while (x != y)
   {
+    count++;
+
     if (x > y)
       x = x - y;
     else
       y = y - x;
   }
+  Console.WriteLine($"EuclideanAlgorithm, count: {count}");
 
   return x;
 }
@@ -154,14 +165,19 @@ int EuclideanAlgorithm(int x, int y)
 
 int QuickEuclideanAlgorithm(int x, int y)
 {
+  int count = 0;
+
   int t;
 
   while (y != 0)
   {
+    count++;
+
     t = x % y;
     x = y;
     y = t;
   }
+  Console.WriteLine($"QuickEuclideanAlgorithm, count: {count}");
 
   return x;
 }
