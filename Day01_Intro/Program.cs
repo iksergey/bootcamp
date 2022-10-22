@@ -100,3 +100,76 @@ long QuickPow(int a, int n)
 // Console.WriteLine(QuickPow(2, 10));
 
 #endregion
+
+#region НОД(x, y)
+
+///greatest common divisor
+
+int GcdForUp(int x, int y)
+{
+  int gcd = 1;
+  int min = x < y ? x : y;
+
+  for (int i = 2; i <= min; i++)
+  {
+    if (x % i == 0 && y % i == 0) gcd = i;
+  }
+
+  return gcd;
+}
+int GcdForDown(int x, int y)
+{
+  int gcd = 1;
+  int min = x < y ? x : y;
+
+  for (int i = min; i >= 2; i--)
+  {
+    if (x % i == 0 && y % i == 0) { gcd = i; break; }
+  }
+
+  return gcd;
+}
+
+// int from = 14, to = 21;
+// Console.WriteLine(GcdForUp(from, to));
+// Console.WriteLine(GcdForDown(from, to));
+
+int EuclideanAlgorithm(int x, int y)
+{
+  while (x != y)
+  {
+    if (x > y)
+      x = x - y;
+    else
+      y = y - x;
+  }
+
+  return x;
+}
+
+// int from = 10, to = 1000;
+// Console.WriteLine(GcdForUp(from, to));
+// Console.WriteLine(GcdForDown(from, to));
+// Console.WriteLine(EuclideanAlgorithm(from, to));
+
+int QuickEuclideanAlgorithm(int x, int y)
+{
+  int t;
+
+  while (y != 0)
+  {
+    t = x % y;
+    x = y;
+    y = t;
+  }
+
+  return x;
+}
+
+// int from = 1, to = 1;
+// Console.WriteLine(GcdForUp(from, to));
+// Console.WriteLine(GcdForDown(from, to));
+// Console.WriteLine(EuclideanAlgorithm(from, to));
+// Console.WriteLine(QuickEuclideanAlgorithm(from, to));
+
+#endregion
