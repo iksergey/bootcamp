@@ -1,10 +1,9 @@
-# Intro Bootcamp 22.10.2022
+# Репозитория "practice_temp" нет, поэтому делаю здесь.
 
-## Алгоритмы в C#. Эффективность алгоритма
+## 3. Установка git на мой ПК (Windows)
 ### Камянецкий Сергей
 
-## Тезисы
-* Сложность: виды \[ [демонстрация](https://www.desmos.com/calculator/hu3tfwk5dg?lang=ru) \]
-* Примеры \[ [код](Day01_Intro/Program.cs) \]
-* Подсчёт операций
-* Презентация \[ [PDF](Day01_Intro/bootcamp.pdf) | [Keynote](Day01_Intro\bootcamp.key) \]
+1. Качаем установочный файл по адресу: https://git-scm.com/downloads;
+2. Запускаем Git-2.38.1-64-bit.exe;
+3. Следуем шагам установщика;
+4. Готово!
